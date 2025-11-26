@@ -2,35 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Simple Web Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #333;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Application Form</h1>
+  <form action="/submit" method="POST">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-  <h1>Welcome to My Simple Web Page</h1>
-  <p>This is a paragraph of text.</p>
-  <button onclick="sayHello()">Click Me!</button>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-  <script>
-    function sayHello() {
-      alert("Hello there!");
-    }
-  </script>
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone"><br><br>
 
+    <label for="message">Why do you want to apply?</label><br>
+    <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+    <button type="submit">Submit Application</button>
+  </form>
 </body>
 </html>
+
